@@ -26,24 +26,24 @@
 
 #include <stdlib.h>
 #include "epd1in54.h"
-
+#include "msp.h"
 Epd::~Epd() {
 };
 
 Epd::Epd() {
-    reset_pin = RST_PIN;
-    dc_pin = DC_PIN;
-    cs_pin = CS_PIN;
-    busy_pin = BUSY_PIN;
+//    reset_pin = RST_PIN;
+//    dc_pin = DC_PIN;
+//    cs_pin = CS_PIN;
+//    busy_pin = BUSY_PIN;
     width = EPD_WIDTH;
     height = EPD_HEIGHT;
 };
 
 int Epd::Init(const unsigned char* lut) {
-    /* this calls the peripheral hardware interface, see epdif */
+    /* this calls the peripheral hardware interface, see epdif
     if (IfInit() != 0) {
         return -1;
-    }
+    } */
     /* EPD hardware init start */
     this->lut = lut;
     Reset();
@@ -72,25 +72,38 @@ int Epd::Init(const unsigned char* lut) {
  *  @brief: basic function for sending commands
  */
 void Epd::SendCommand(unsigned char command) {
-//    DigitalWrite(dc_pin, LOW);
-    SpiTransfer(command);
+    // include my implentation for spi send data/command
+        // NOTE: LaunchPad
+          //TODO: change for pcb
+          while(EUSCI_B3_SPI->IFG & UCTXIFG);
+          P10OUT &= ~BIT0;     // D/C
+          P10OUT &= ~BIT3;     // CS
+          EUSCI_B3_SPI->TXBUF = command;
+          P10OUT |= BIT3;
 }
 
 /**
  *  @brief: basic function for sending data
  */
 void Epd::SendData(unsigned char data) {
-  //  DigitalWrite(dc_pin, HIGH);
-    SpiTransfer(data);
+    // TODO: include implementation for spi command/data
+        //TODO: change for pcb / firmware
+        while(EUSCI_B3_SPI->IFG & UCTXIFG);
+        P10OUT |=   BIT0;     // D/C
+        P10OUT &= ~BIT3;     // CS
+        EUSCI_B3_SPI->TXBUF = data;
+        P10OUT |= BIT3
 }
 
 /**
  *  @brief: Wait until the busy_pin goes LOW
  */
 void Epd::WaitUntilIdle(void) {
-    while(DigitalRead(busy_pin) == HIGH) {      //LOW: idle, HIGH: busy
-        DelayMs(100);
-    }      
+    uint8_t check = P7IN & BIT2;
+     uint16_t delay = 0;
+    while(P7IN & BIT2){
+    for(delay = 0; delay < 12000; delay++);
+    }
 }
 
 /**
@@ -99,10 +112,11 @@ void Epd::WaitUntilIdle(void) {
  *          see Epd::Sleep();
  */
 void Epd::Reset(void) {
-    DigitalWrite(reset_pin, LOW);                //module reset    
-    DelayMs(20);
-    DigitalWrite(reset_pin, HIGH);
-    DelayMs(20);
+    uint16_t delay = 0;
+    P7OUT &=~BIT1;
+    for(delay = 0; delay < 12000; delay++);
+    P7OUT |= BIT1;
+    for(delay = 0; delay < 12000; delay++); //double check with LA to see if equal or greater than 10mS
 }
 
 /**

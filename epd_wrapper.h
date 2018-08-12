@@ -33,11 +33,36 @@ void EPDSetFrameMemory(ePD* d, const uint8_t* image_buffer, uint8_t x, uint8_t y
 
 void EPDSetFrameMemoryFull(ePD* d, const uint8_t* image_buffer); // does entire screen not just at location
 
-void EPDClearFrameMemory(ePD* d);
+void EPDClearFrameMemory(ePD* d, uint8_t colored);
 
 void EPDDisplayFrame(ePD* d);
 
 void EPDSleep(ePD* d);
+
+
+/*
+ * @name: sendCommand(byte command)
+ * @brief: Sends a command byte to the ePaper
+ *              - toggles the CS pin to be low
+ *              - sets the command pin to low
+ * @inputs: a valid command found in the data sheet and the header file
+ * */
+void SendCommand(uint8_t command);
+
+
+/*
+ * @name: sendData(byte data)
+ * @brief: Sends a command byte to the ePaper
+ *              - toggles the CS pin to be low
+ *              - sets the command pin to HIGH
+ * @inputs: send bytes of data to the ePaper
+*/
+void SendData(uint8_t data);
+
+
+
+
+
 
 //do I do the private functions too? I don't think so..
 

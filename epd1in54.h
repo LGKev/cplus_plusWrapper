@@ -27,7 +27,10 @@
 #ifndef EPD1IN54_H
 #define EPD1IN54_H
 
-#include "epdif.h"
+//include ePaper.h
+#ifdef __cplusplus
+    extern "C" {
+#endif
 
 // Display resolution
 #define EPD_WIDTH       200
@@ -95,6 +98,12 @@ private:
     void SetMemoryPointer(int x, int y);
 };
 
+#ifdef __cplusplus
+    }
+#endif
+
+
 #endif /* EPD1IN54_H */
 
 /* END OF FILE */
+

@@ -1,9 +1,13 @@
 # FIXED
 
-main.obj: ../main.c
+main.obj: ../main.cpp
 main.obj: ../epd_wrapper.h
 main.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h
 main.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h
+main.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h
+main.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/__config
+main.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/__config_site
+main.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/__libcxx_extra.h
 main.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdint.h
 main.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/stdint.h
 main.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/cdefs.h
@@ -21,12 +25,16 @@ main.obj: ../paint_wrapper.h
 main.obj: ../fonts.h
 main.obj: ../font24.c
 main.obj: ../epd1in54.h
-main.obj: ../epdif.h
+main.obj: ../ePaper.h
 
-../main.c: 
+../main.cpp: 
 ../epd_wrapper.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h: 
+/home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h: 
+/home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/__config: 
+/home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/__config_site: 
+/home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/__libcxx_extra.h: 
 /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdint.h: 
 /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/stdint.h: 
 /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/cdefs.h: 
@@ -44,4 +52,4 @@ main.obj: ../epdif.h
 ../fonts.h: 
 ../font24.c: 
 ../epd1in54.h: 
-../epdif.h: 
+../ePaper.h: 

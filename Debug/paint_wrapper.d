@@ -2,7 +2,7 @@
 
 paint_wrapper.obj: ../paint_wrapper.cpp
 paint_wrapper.obj: ../epd1in54.h
-paint_wrapper.obj: ../epdif.h
+paint_wrapper.obj: ../paint_wrapper.h
 paint_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h
 paint_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h
 paint_wrapper.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h
@@ -22,12 +22,11 @@ paint_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/core_cm4.h
 paint_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_compiler.h
 paint_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_ccs.h
 paint_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/system_msp432p401r.h
-paint_wrapper.obj: ../paint_wrapper.h
 paint_wrapper.obj: ../fonts.h
 
 ../paint_wrapper.cpp: 
 ../epd1in54.h: 
-../epdif.h: 
+../paint_wrapper.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h: 
 /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h: 
@@ -47,5 +46,4 @@ paint_wrapper.obj: ../fonts.h
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_compiler.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_ccs.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/system_msp432p401r.h: 
-../paint_wrapper.h: 
 ../fonts.h: 

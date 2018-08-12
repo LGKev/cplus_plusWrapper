@@ -10,10 +10,8 @@ GEN_CMDS__FLAG :=
 ORDERED_OBJS += \
 "./epd1in54.obj" \
 "./epd_wrapper.obj" \
-"./epdif.obj" \
 "./epdpaint.obj" \
 "./font24.obj" \
-"./font8.obj" \
 "./imagedata.obj" \
 "./main.obj" \
 "./paint_wrapper.obj" \
@@ -162,9 +160,9 @@ epaper_wrapper.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "epd1in54.obj" "epd_wrapper.obj" "epdif.obj" "epdpaint.obj" "font24.obj" "font8.obj" "imagedata.obj" "main.obj" "paint_wrapper.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" 
-	-$(RM) "font24.d" "font8.d" "main.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" 
-	-$(RM) "epd1in54.d" "epd_wrapper.d" "epdif.d" "epdpaint.d" "imagedata.d" "paint_wrapper.d" 
+	-$(RM) "epd1in54.obj" "epd_wrapper.obj" "epdpaint.obj" "font24.obj" "imagedata.obj" "main.obj" "paint_wrapper.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" 
+	-$(RM) "font24.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" 
+	-$(RM) "epd1in54.d" "epd_wrapper.d" "epdpaint.d" "imagedata.d" "main.d" "paint_wrapper.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

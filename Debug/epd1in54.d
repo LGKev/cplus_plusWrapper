@@ -10,7 +10,6 @@ epd1in54.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/includ
 epd1in54.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/linkage.h
 epd1in54.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/cdefs.h
 epd1in54.obj: ../epd1in54.h
-epd1in54.obj: ../epdif.h
 epd1in54.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h
 epd1in54.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h
 epd1in54.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h
@@ -37,7 +36,6 @@ epd1in54.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/system_msp432p401r.h
 /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/linkage.h: 
 /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/cdefs.h: 
 ../epd1in54.h: 
-../epdif.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h: 
 /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h: 

@@ -1,1 +1,1 @@
-"./epd1in54.obj" "./epd_wrapper.obj" "./epdif.obj" "./epdpaint.obj" "./font24.obj" "./font8.obj" "./imagedata.obj" "./main.obj" "./paint_wrapper.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "../msp432p401r.cmd" -llibc.a 
+"./epd1in54.obj" "./epd_wrapper.obj" "./epdpaint.obj" "./font24.obj" "./imagedata.obj" "./main.obj" "./paint_wrapper.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "../msp432p401r.cmd" -llibc.a 

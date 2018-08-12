@@ -22,7 +22,6 @@ epd_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_compile
 epd_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_ccs.h
 epd_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/system_msp432p401r.h
 epd_wrapper.obj: ../epd1in54.h
-epd_wrapper.obj: ../epdif.h
 
 ../epd_wrapper.cpp: 
 ../epd_wrapper.h: 
@@ -46,4 +45,3 @@ epd_wrapper.obj: ../epdif.h
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_ccs.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/system_msp432p401r.h: 
 ../epd1in54.h: 
-../epdif.h: 

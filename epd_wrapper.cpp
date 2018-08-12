@@ -20,7 +20,14 @@ ePD* EPDNewEPD(void){
 
 // destructor?
 
-
+void Reset(){
+    //reset epaper 10ms
+          uint16_t delay = 0;
+          P7OUT &=~BIT1;
+          for(delay = 0; delay < 12000; delay++);
+          P7OUT |= BIT1;
+          for(delay = 0; delay < 12000; delay++); //double check with LA to see if equal or greater than 10mS
+}
 
 void EPDInit(ePD* d, const uint8_t* lut){ //initialize the EPD object
 	d->lut = lut; 
@@ -44,22 +51,33 @@ void EPDInit(ePD* d, const uint8_t* lut){ //initialize the EPD object
 	SendData(0x03);                     // X increment; Y increment
 	SetLut(lut);
 	/* EPD hardware init end */
-	return 0;
-
 }
 
 
-void EPDSendCommand( uint8_t command){
+void SendCommand( uint8_t command){
 // include my implentation for spi send data/command	
+    // NOTE: LaunchPad
+      //TODO: change for pcb
+      while(EUSCI_B3_SPI->IFG & UCTXIFG);
+      P10OUT &= ~BIT0;     // D/C
+      P10OUT &= ~BIT3;     // CS
+      EUSCI_B3_SPI->TXBUF = command;
+      P10OUT |= BIT3;
 }
 	
-void EPDSendData( uint8_t data){
+void SendData( uint8_t data){
 // TODO: include implementation for spi command/data
+    //TODO: change for pcb / firmware
+    while(EUSCI_B3_SPI->IFG & UCTXIFG);
+    P10OUT |=   BIT0;     // D/C
+    P10OUT &= ~BIT3;     // CS
+    EUSCI_B3_SPI->TXBUF = data;
+    P10OUT |= BIT3;
 }
 
 
 void EPDWaitUntilIdle(ePD* d){
-	d->WaitIntilIdle();
+	d->WaitUntilIdle();
 }
 
 
@@ -86,7 +104,7 @@ void EPDSleep(ePD* d){
 }
 
  
-void EPDClearFrameMemory(ePD* d){
+void EPDClearFrameMemory(ePD* d, uint8_t colored){
 	d->ClearFrameMemory();
 }
 

@@ -1,5 +1,5 @@
 /*
- * pauint8_t_wrapper.h
+ * paint_wrapper.h
  *
  *  Created on: Aug 11, 2018
  *      Author: kkuwata
@@ -13,36 +13,32 @@
 
 
 #ifdef __cplusplus
-	extern "C" {
+extern "C" {
 #endif
 
-typedef struct gfx gfx;
+	typedef struct gfx gfx;
 
-gfx* GFXPaintNewPaint(int8_t* image, uint8_t width, uint8_t height);
-   
-void GFXPauint8_tClear(gfx* pauint8_t, uint8_t colored);
-void GFXPauint8_tClear(gfx* pauint8_t, uint8_t colored);
-void GFXPauint8_tClear(gfx* pauint8_t, uint8_t colored);
-void GFXPauint8_tClear(gfx* pauint8_t, uint8_t colored);
-void GFXPauint8_tClear(gfx* pauint8_t, uint8_t colored);
-uint8_t  GFXPauint8_tGetWidth(gfx* pauint8_t);
-void GFXPauint8_tSetWidth(gfx* pauint8_t, uint8_t width);
-uint8_t  GFXPauint8_tGetHeight(gfx* pauint8_t);
-void GFXPauint8_tSetHeight(gfx* pauint8_t, uint8_t height);
-uint8_t  GFXPauint8_tGetRotate(gfx* pauint8_t);
-void GFXPauint8_tSetRotate(gfx* pauint8_t, uint8_t rotate);
-unsigned char* GetImage(gfx* pauint8_t);
-void GFXPauint8_tDrawAbsolutePixel(gfx* pauint8_t, uint8_t x, uint8_t y, uint8_t colored);
-void GFXPauint8_tDrawPixel(gfx* pauint8_t, uint8_t x, uint8_t y, uint8_t colored);
-void GFXPauint8_tDrawCharAt(gfx* pauint8_t, uint8_t x, uint8_t y, char ascii_char, sFONT* font, uint8_t colored);
-void GFXPauint8_tDrawStringAt(gfx* pauint8_t, uint8_t x, uint8_t y, const char* text, sFONT* font, uint8_t colored);
-void  GFXPauint8_tDrawLine(gfx* pauint8_t, uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t colored);
-void  GFXPauint8_tDrawHorizontalLine(gfx* pauint8_t, uint8_t x, uint8_t y, uint8_t width, uint8_t colored);
-void  GFXPauint8_tDrawVerticalLine(gfx* pauint8_t, uint8_t x, uint8_t y, uint8_t height, uint8_t colored);
-void  GFXPauint8_tDrawRectangle(gfx* pauint8_t, uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t colored);
-void  GFXPauint8_tDrawFilledRectangle(gfx* pauint8_t, uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t colored);
-void  GFXPauint8_tDrawCircle(gfx* pauint8_t, uint8_t x, uint8_t y, uint8_t radius, uint8_t colored);
-void  GFXPauint8_tDrawFilledCircle(gfx* pauint8_t, uint8_t x, uint8_t y, uint8_t radius, uint8_t colored);
+	gfx* GFXPaintNewPaint(uint8_t* image, uint8_t width, uint8_t height);
+
+	void GFXPaintClear(gfx* paint, uint8_t colored);
+	uint8_t  GFXPaintGetWidth(gfx* paint);
+	void GFXPaintSetWidth(gfx* paint, uint8_t width);
+	uint8_t  GFXPaintGetHeight(gfx* paint);
+	void GFXPaintSetHeight(gfx* paint, uint8_t height);
+	uint8_t  GFXPaintGetRotate(gfx* paint);
+	void GFXPaintSetRotate(gfx* paint, uint8_t rotate);
+	uint8_t* GFXPaintGetImage(gfx* paint);
+	void GFXPaintDrawAbsolutePixel(gfx* paint, uint8_t x, uint8_t y, uint8_t colored);
+	void GFXPaintDrawPixel(gfx* paint, uint8_t x, uint8_t y, uint8_t colored);
+	void GFXPaintDrawCharAt(gfx* paint, uint8_t x, uint8_t y, char ascii_char, sFONT* font, uint8_t colored);
+	void GFXPaintDrawStringAt(gfx* paint, uint8_t x, uint8_t y, const char* text, sFONT* font, uint8_t colored);
+	void  GFXPaintDrawLine(gfx* paint, uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t colored);
+	void  GFXPaintDrawHorizontalLine(gfx* paint, uint8_t x, uint8_t y, uint8_t width, uint8_t colored);
+	void  GFXPaintDrawVerticalLine(gfx* paint, uint8_t x, uint8_t y, uint8_t height, uint8_t colored);
+	void  GFXPaintDrawRectangle(gfx* paint, uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t colored);
+	void  GFXPaintDrawFilledRectangle(gfx* paint, uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, uint8_t colored);
+	void  GFXPaintDrawCircle(gfx* paint, uint8_t x, uint8_t y, uint8_t radius, uint8_t colored);
+	void  GFXPaintDrawFilledCircle(gfx* paint, uint8_t x, uint8_t y, uint8_t radius, uint8_t colored);
 
 
 

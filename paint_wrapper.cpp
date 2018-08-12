@@ -12,7 +12,7 @@
 
 extern "C" {
 
-gfx* paint = GFXPaintNewPaint(gfx* paint, uint8_t* image, uint8_t width, uint8_t height){
+gfx* paint = GFXPaintNewPaint(uint8_t* image, uint8_t width, uint8_t height){
 	return new Paint(image, width, height);
 }	
 
