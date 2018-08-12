@@ -1,7 +1,8 @@
 # FIXED
 
 epd_wrapper.obj: ../epd_wrapper.cpp
-epd_wrapper.obj: ../epd_wrapper.h
+epd_wrapper.obj: ../epd1in54.hpp
+epd_wrapper.obj: ../epdif.h
 epd_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h
 epd_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h
 epd_wrapper.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h
@@ -21,10 +22,11 @@ epd_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/core_cm4.h
 epd_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_compiler.h
 epd_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_ccs.h
 epd_wrapper.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/system_msp432p401r.h
-epd_wrapper.obj: ../epd1in54.h
+epd_wrapper.obj: ../epd_wrapper.h
 
 ../epd_wrapper.cpp: 
-../epd_wrapper.h: 
+../epd1in54.hpp: 
+../epdif.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h: 
 /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h: 
@@ -44,4 +46,4 @@ epd_wrapper.obj: ../epd1in54.h
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_compiler.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_ccs.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/system_msp432p401r.h: 
-../epd1in54.h: 
+../epd_wrapper.h: 

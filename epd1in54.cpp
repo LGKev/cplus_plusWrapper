@@ -24,8 +24,8 @@
  * THE SOFTWARE.
  */
 
+#include <epd1in54.hpp>
 #include <stdlib.h>
-#include "epd1in54.h"
 #include "msp.h"
 Epd::~Epd() {
 };
@@ -92,7 +92,7 @@ void Epd::SendData(unsigned char data) {
         P10OUT |=   BIT0;     // D/C
         P10OUT &= ~BIT3;     // CS
         EUSCI_B3_SPI->TXBUF = data;
-        P10OUT |= BIT3
+        P10OUT |= BIT3;
 }
 
 /**

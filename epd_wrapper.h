@@ -24,7 +24,6 @@ void EPDSendCommand(ePD* d, uint8_t command);
 
 void EPDSendData(ePD* d, uint8_t data);
 
-
 void EPDWaitUntilIdle(ePD* d);//
 
 void EPDReset(ePD* d); //

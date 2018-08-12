@@ -1,7 +1,8 @@
 # FIXED
 
 main.obj: ../main.cpp
-main.obj: ../epd_wrapper.h
+main.obj: /home/kkuwata/workspace_v8/epaper_wrapper/epd1in54.hpp
+main.obj: /home/kkuwata/workspace_v8/epaper_wrapper/epdif.h
 main.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h
 main.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h
 main.obj: /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h
@@ -21,14 +22,15 @@ main.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/core_cm4.h
 main.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_compiler.h
 main.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_ccs.h
 main.obj: /home/kkuwata/ti/ccsv8/ccs_base/arm/include/system_msp432p401r.h
+main.obj: ../epd_wrapper.h
 main.obj: ../paint_wrapper.h
 main.obj: ../fonts.h
 main.obj: ../font24.c
-main.obj: ../epd1in54.h
 main.obj: ../ePaper.h
 
 ../main.cpp: 
-../epd_wrapper.h: 
+/home/kkuwata/workspace_v8/epaper_wrapper/epd1in54.hpp: 
+/home/kkuwata/workspace_v8/epaper_wrapper/epdif.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/msp432p401r.h: 
 /home/kkuwata/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/libcxx/stdint.h: 
@@ -48,8 +50,8 @@ main.obj: ../ePaper.h
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_compiler.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/CMSIS/cmsis_ccs.h: 
 /home/kkuwata/ti/ccsv8/ccs_base/arm/include/system_msp432p401r.h: 
+../epd_wrapper.h: 
 ../paint_wrapper.h: 
 ../fonts.h: 
 ../font24.c: 
-../epd1in54.h: 
 ../ePaper.h: 

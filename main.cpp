@@ -1,8 +1,8 @@
+#include <epd1in54.hpp>
 #include "epd_wrapper.h"
 #include "paint_wrapper.h"
 #include "font24.c"
 //#include "epdif.h"  this is the inteface for spi, replace this with my commands with same header?
-#include "epd1in54.h"
 #include "ePaper.h" //has my defines and there, names should be similar...
 
 // need to copy over the SendCommand, SendData

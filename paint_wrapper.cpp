@@ -7,7 +7,7 @@
 
 
 
-#include "epd1in54.h"
+#include <epd1in54.hpp>
 #include "paint_wrapper.h"
 
 extern "C" {

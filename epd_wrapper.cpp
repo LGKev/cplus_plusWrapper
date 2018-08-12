@@ -7,12 +7,16 @@
 
 
 
-#include "epd_wrapper.h"
-#include "epd1in54.h"
+#include "epd1in54.hpp"
+#include "epd_wrapper.h" //wraps around epd1in54.hpp
 
 //include the driver for spi /epaper
-
+#ifdef __cplusplus
 extern "C" {
+#endif
+
+
+
 
 ePD* EPDNewEPD(void){
 	return new Epd();
@@ -114,5 +118,6 @@ void EPDDisplayFrame(ePD* d){
 
 
 
-
+#ifdef __cplusplus
 } 
+#endif
